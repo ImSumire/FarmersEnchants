@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "farmers-enchants",
+	"version": "${version}",
+	"name": "Farmer's Enchants",
+	"description": "Add enchantments for farming tools, first Minecraft mod!",
+	"authors": [
+		"ImSumire"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/ImSumire/FarmersEnchants"
+	},
+	"license": "GNU General Public License v3.0",
+	"icon": "assets/farmers-enchants/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.sumire.farmersenchants.FarmersEnchants"
+		],
+		"client": [
+			"net.sumire.farmersenchants.FarmersEnchantsClient"
+		]
+	},
+	"mixins": [
+		"farmers-enchants.mixins.json",
+		{
+			"config": "farmers-enchants.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.19.4",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
